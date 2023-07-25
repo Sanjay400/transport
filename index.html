@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol-Diesel-Gas Info</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-child magenta">
+<table class="table">
+    <tr class="table-row">
+        <td>
+            <form onsubmit="event.preventDefault(); onFormSubmit();" >
+                <div class="container">
+                    <h1 id="heading1">Details</h1>
+                    <p id="p1">Please fill  this form to create a Record.</p>
+                    <hr>
+            
+                    <label id="label" for="VehicleNumber"><b>Vehicle Number</b></label>
+                    <input type="text" placeholder="TN XX 38 XXXX or particular number" name="VehicleNumber" id="VehicleNumber" required >
+
+                    <br><input type="radio" id="petrol" name="petrol" value="Petrol">
+                    <label for="vehicle"> <b>Petrol</b></label>
+                    <input type="radio" id="diesel" name="diesel" value="diesel">
+                    <label for="vehicle"> <b>Diesel</b></label>
+                    <input type="radio" id="gas" name="gas" value="gas">
+                    <label for="vehicle"> <b>Gas</b></label>
+                    <br><br><label for="start"> <b>Date:</b></label>
+
+                    <br><input type="Date" id="date" name="trip-start"  
+                    value="2018-07-22"
+                    min="2023-01-01" max="2045-12-31">
+
+                    <br><br><label for="litres"><b>Litres</b></label><br>
+                     <input onkeyup="fuelPrice(event)" type="" id="litres" type="text" name="litres" required><br>
+   
+                    <br><label for="rupee"><b>Rupee &#8377;<b></label><br>
+                    <input class="" id="rupee" type="text" name="rupee" required value="0" disabled><br>
+                    <hr>
+            
+                    <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+                    <button type="submit" name="submit"class="registerbtn">Submit</button>
+                </div>
+            </form>
+        </td>
+       
+    </tr>
+    
+</table>
+</div>
+<div class="flex-child green">
+ <td>
+            <table  id="empList">
+                <h1 id="record">Record</h1>
+                <thead id="tab_head">
+                        <tr>
+                            <th>Vehicle Number</th>
+                            <th>Petrol<br>Diesel<br>Gas</th>
+                            <th>Date</th>
+                            <th>Litres</th>
+                            <th>Rupees</th>
+                            <th><b>Edit</b></th>
+                            <th><b>Delete</b></th>
+                        </tr>
+                </thead>
+               
+                <tbody id="tab_body">
+
+                </tbody>
+                
+            </table>
+        </td>
+        </div>
+</div>
+    <script src="./index.js"></script>
+</body>
+</html>
